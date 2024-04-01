@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* 
+   Before we discuss the units we need to understand what is viewport. 
+   viewport is the area in computer graphics is currently being viewed, so 
+   in web browser terms its the area of the browser in which website content is displayed.
+   The size of the viewport is different from computer tablet and phone as each of them has different size
+   so the viewport is basically the part of document that is currently visible.
+   viewport units are vh vw vmin vmax those are responsive length units which adjust 
+   based on the browser viewport size offering dynamic sizing options for elements in CSS.
+   - vh stands for viewport height its based on the height of the viewport 1vh is equal 
+   to 1% of the viewport height. 
+   - vw stands for viewport width its based on the width of the viewport 100vw is equal 
+   to 100% of the viewport width.
+   - vmin stands for viewport minimum its based on the smaller dimension of the viewport
+   whether the height or the width so 50vmin is equal to 50% of the smaller dimension.  
+   - vmax stands for viewport maximum its based on the larger dimension of the viewport
+   whether the height or the width so 25vmax is equal to 25% of the larger dimension.
+   Important note and difference between viewport units and percentage,
+   when u say width: 50%; this one is calculating 50% from the size of the parent
+   but        width: 50vw  this one is calculating 50% from the width of the viewport view.
+   so viewport unites help us in having responsive design so on the mobile screen our elements
+   will look smaller but proportional to the size of the screen and if we opened the design 
+   on a tablet it will be proportional to the size of the tablet screen and so on on each screen size.
+   so understanding viewport is essential for responsive design as media query which depends on viewport
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #808080;
+}
+
+h2 {
+  font-size: 8vmin;
+  color: #32cd32;
+}
+
+p {
+  font-size: 2vmax;
+  color: #7ddc7d;
+  text-wrap: balance;
+}
